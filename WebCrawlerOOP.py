@@ -37,11 +37,11 @@ class Movie():
 		date_of_release = m.date_of_release[0]
 		
 		for title in m.new_movies_titles:
-			c.executemany('INSERT INTO movies VALUES ('\''+date_of_release+'\'','\''+titles'\'')
+			c.executemany('INSERT INTO movies VALUES (\''+date_of_release+'\',\''+titles+'\')')
 		
-		movie_list_file.write('\n' + '\''+date_of_release+'\'' + ': \n' + '\''+titles'\'')
+		# movie_list_file.write('\n' + '\''+date_of_release+'\'' + ': \n' + '\''+titles'\'')
 								
-		movie_list_file.close()
+		# movie_list_file.close()
 while True:
 	Movie.write_movies_to_list()
 	time.sleep(86400)
